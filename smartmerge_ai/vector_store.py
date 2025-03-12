@@ -1,11 +1,11 @@
-# Handles vector storage and retrieval (using FAISS, ChromaDB, etc.)
-#  write logic here and store data into embeddings as seperate open_prs and closed_prs
-# Or Store data in into Local database.
-# create a file for local database connection in smartmerge_ai folder name (optional)
-# for input file you will See in data/raw/closed_pr or data/raw/open_pr after running main.py
-# Load environment variables
+# # Handles vector storage and retrieval (using FAISS, ChromaDB, etc.)
+# #  write logic here and store data into embeddings as seperate open_prs and closed_prs
+# # Or Store data in into Local database.
+# # create a file for local database connection in smartmerge_ai folder name (optional)
+# # for input file you will See in data/raw/closed_pr or data/raw/open_pr after running main.py
+# # Load environment variables
 
-# below are just Example for project run purpose you need to modify this accordingly
+# # below are just Example for project run purpose you need to modify this accordingly
 
 
 import os
@@ -57,3 +57,4 @@ def initialize_retriever(closed_pr_texts):
     chunked_texts = chunk_data(closed_pr_texts)
     vector_store = FAISS.from_texts(chunked_texts, embeddings)
     return vector_store.as_retriever()
+

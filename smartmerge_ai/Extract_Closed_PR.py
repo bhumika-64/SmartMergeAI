@@ -164,3 +164,9 @@ def fetch_all_closed_prs(repo_owner, repo_name):
     print(f"Fetched all closed PRs")
     print(f"PR details saved in {file_path}")
     
+if __name__ == "__main__":
+    repo_owner = "pypa"
+    repo_name = "wheel"
+   
+    # Fetch closed PRs
+    fetch_all_closed_prs(repo_owner, repo_name)
